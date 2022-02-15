@@ -1,0 +1,18 @@
+{
+
+    "already_exsists": "Book already exsists",
+    "insert_success_book": "Book inserted",
+    "delete_success": "Book Deleted",
+    "delete_fail": "Book  does not  exsists",
+    "book_success": "Book list",
+    "book_fail": "Books  not found",
+
+    "internal_server_error": "Internal Sever error",
+
+    "search_success": "Book  found ",
+    "search_not_found": "Book  not  found "
+
+
+
+
+}
