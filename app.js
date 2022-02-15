@@ -15,7 +15,7 @@ var uri = `mongodb://${db.development.host}:${db.development.port}/${db.developm
 
 mongoose.connect(uri)
     // Connecting database 
-
+                                          
 mongoose.connection.on('error', (err) => console.log(err))
 mongoose.connection.on('open', () => console.log("Successfully connected "))
 
