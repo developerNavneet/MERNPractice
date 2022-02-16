@@ -41,3 +41,17 @@ module.exports.searchBook = celebrate({
         _id: Joi.string().required()
     })
 })
+
+module.exports.updateBook = celebrate({
+
+    body: Joi.object().options({ abortEarly: false }).keys({
+
+        name: Joi.string().required(),
+        language: Joi.string().optional(),
+        author: Joi.string().required(),
+        price: Joi.number().required(),
+        available: Joi.bool().optional()
+
+
+    })
+})

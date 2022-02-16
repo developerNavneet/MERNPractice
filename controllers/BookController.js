@@ -102,3 +102,15 @@ module.exports.searchBook = async(req, res) => {
     }
 
 }
+
+module.exports.updateBook = async(req, res) => {
+    try {
+        console.log(req.body)
+
+
+    } catch (error) {
+
+    }
+
+
+}
