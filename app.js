@@ -15,7 +15,7 @@ var uri = `mongodb://${db.development.host}:${db.development.port}/${db.developm
 
 mongoose.connect(uri)
     // Connecting database 
-                                          
+
 mongoose.connection.on('error', (err) => console.log(err))
 mongoose.connection.on('open', () => console.log("Successfully connected "))
 
@@ -24,10 +24,10 @@ app.use(cors()) // Middleware call
 app.use(express.json())
 app.use(errors())
 
-app.use(require('./routes/bookRoutes.js'))
+app.use(require('./routes/index'))
 
 const httpServer = http.createServer(app)
-// made india
+    // made india
 
 httpServer.listen(config.port, (err) => console.log("hii"))
     //Sever Created
