@@ -9,5 +9,6 @@ router.get('/deleteBook', bookValidator.deleteBook, bookControllers.removeBook);
 router.get('/viewAll', bookControllers.viewAll);
 router.get("/searchBook", bookControllers.searchBook)
 router.delete('/deleteBook', bookValidator.deleteBooks, bookControllers.deleteBook);
-router.put('/updateBook', bookValidator.updateBook, bookControllers.updateBook)
+router.put('/updateBook', bookControllers.updateBook);
+
 module.exports = router

@@ -107,6 +107,24 @@ module.exports.updateBook = async(req, res) => {
     try {
         console.log(req.body)
 
+        let book = await Book.findOne({ _id: req.body._id })
+
+
+        if (!book) {
+
+            responseManagement.sendResponse(res, httpStatus.BAD_REQUEST, messages.messages.search_not_found)
+        } else {
+            console.log(req.body)
+
+
+            await Book.updateOne({ _id: req.body._id }, req.body)
+
+
+
+            responseManagement.sendResponse(res, httpStatus.OK, messages.book_update, book)
+
+
+        }
 
     } catch (error) {
 

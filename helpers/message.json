@@ -10,6 +10,7 @@
     "internal_server_error": "Internal Sever error",
 
     "search_success": "Book  found ",
+    "book_update": "Book Updated Successfully",
     "search_not_found": "Book  not  found "
 
 
