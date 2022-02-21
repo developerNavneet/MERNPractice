@@ -19,7 +19,7 @@ module.exports.insertBook = async(req, res) => {
         responseManagement.sendResponse(res, httpStatus.OK, messages.insert_success_book)
 
     } catch (error) {
-
+        console.log(error)
         responseManagement.sendResponse(res, httpStatus.INTERNAL_SERVER_ERROR, messages.internal_server_error)
     }
 

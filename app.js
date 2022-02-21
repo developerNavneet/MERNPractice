@@ -22,6 +22,7 @@ mongoose.connection.on('open', () => console.log("Successfully connected "))
 
 app.use(cors()) // Middleware call 
 app.use(express.json())
+
 app.use(errors())
 
 app.use(require('./routes/index'))
