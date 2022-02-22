@@ -1,13 +1,13 @@
 const { celebrate, Joi } = require('celebrate')
 
-module.exports.userValidator = celebrate({
+module.exports.createUser = celebrate({
 
     body: Joi.object().options({ abortEarly: false }).keys({
 
         first_name: Joi.string().required(),
         last_name: Joi.string().required(),
         email: Joi.string().required(),
-        password: Joi.number().required()
+        password: Joi.string().required()
 
 
 
