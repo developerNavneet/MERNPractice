@@ -20,7 +20,7 @@ usersSchema.methods.setPassword = function(password) {
 
 usersSchema.methods.validatePassword = function(password) {
 
-    var hash = crypto.pbkdf2Sync(password, this.salt, 100, 512, 'sha512').toString('hex')
+    var hash = crypto.pbkdf2Sync(password, this.salt, 50, 32, 'sha512').toString('hex')
     return hash === this.hash
 
 }
