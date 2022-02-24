@@ -9,12 +9,18 @@ module.exports.registerUser = async(req, res) => {
     try {
 
         let user = await User.findOne({ email: req.body.email })
+
+
         if (user) {
 
             responseManagement.sendResponse(res, httpStatus.BAD_REQUEST, messages.user_already_exsists)
         } else {
+            var password = req.body.password
+            delete req.body.password
+            const users = await User(req.body).save()
+            users.setPassword(password)
+            await User.updateOne({ _id: users._id }, users)
 
-            await User.create(req.body)
 
         }
         responseManagement.sendResponse(res, httpStatus.OK, messages.user_created)
