@@ -8,9 +8,9 @@
     "delete_fail": "Book  does not  exsists",
     "book_success": "Book list",
     "book_fail": "Books  not found",
-
+    "user_login_fail":"Invalid Credentails",
     "internal_server_error": "Internal Sever error",
-
+"login_success":"Login Success",
     "search_success": "Book  found ",
     "book_update": "Book Updated Successfully",
     "search_not_found": "Book  not  found "
