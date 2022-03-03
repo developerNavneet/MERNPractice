@@ -2,7 +2,6 @@ const httpStatus = require("http-status-codes");
 const responseManagement = require("../lib/responseManagement");
 const messages = require("../helpers/message.json");
 const User = require("../models/users");
-const { resetWatchers } = require("nodemon/lib/monitor/watch");
 
 module.exports.registerUser = async (req, res) => {
   try {
